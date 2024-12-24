@@ -1,0 +1,55 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos e Fornecedores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cadastro de Produtos e Fornecedores</h1>
+
+    <!-- Formulário de Cadastro de Produto -->
+    <h2>Cadastro de Produto</h2>
+    <form id="productForm">
+        <input type="text" id="productName" placeholder="Nome do Produto" required>
+        <input type="text" id="productDescription" placeholder="Descrição" required>
+        <input type="number" id="productPrice" placeholder="Preço" required>
+        <input type="text" id="productBarcode" placeholder="Código de Barras" required>
+        <button type="submit">Cadastrar Produto</button>
+    </form>
+
+    <!-- Exibição de Produtos Cadastrados -->
+    <h2>Produtos Cadastrados</h2>
+    <ul id="productList"></ul>
+
+    <!-- Formulário de Cadastro de Fornecedor -->
+    <h2>Cadastro de Fornecedor</h2>
+    <form id="supplierForm">
+        <input type="text" id="supplierName" placeholder="Nome do Fornecedor" required>
+        <input type="text" id="supplierCnpj" placeholder="CNPJ" required>
+        <input type="text" id="supplierAddress" placeholder="Endereço" required>
+        <input type="text" id="supplierContact" placeholder="Contato" required>
+        <button type="submit">Cadastrar Fornecedor</button>
+    </form>
+
+    <!-- Exibição de Fornecedores Cadastrados -->
+    <h2>Fornecedores Cadastrados</h2>
+    <ul id="supplierList"></ul>
+
+    <!-- Formulário de Associação -->
+    <h2>Associar Produto a Fornecedor</h2>
+    <form id="associationForm">
+        <select id="productId">
+            <!-- Produtos serão carregados aqui -->
+        </select>
+        <select id="supplierId">
+            <!-- Fornecedores serão carregados aqui -->
+        </select>
+        <button type="submit">Associar</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
